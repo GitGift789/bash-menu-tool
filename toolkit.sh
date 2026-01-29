@@ -14,3 +14,11 @@ greet_user() {
     echo "Welcome, $USER_NAME"            #Greets the user  
 }
 greet_user
+
+# FUNCTION: show menu
+show_menu() {
+    echo ""
+    echo "1) Show current date"
+    echo "2) List files"
+    echo "3
+}
