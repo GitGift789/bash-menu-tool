@@ -17,8 +17,8 @@ greet_user
 
 # FUNCTION: show menu
 show_menu() {
-    echo ""
-    echo "1) Show current date"
-    echo "2) List files"
-    echo "3
-}
+    echo ""                       #Print a blank line for spacing
+    echo "1) Show current date"   #Option 1
+    echo "2) List files"          #Option 2
+    echo "3) Exit"                #Option 3
+}                                                                       
