@@ -22,3 +22,4 @@ show_menu() {
     echo "2) List files"          #Option 2
     echo "3) Exit"                #Option 3
 }                                                                       
+show_menu
