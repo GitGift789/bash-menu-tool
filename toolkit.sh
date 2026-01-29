@@ -14,7 +14,7 @@ greet_user() {
     echo "Welcome, $USER_NAME"            #Greets the user  
 }
 greet_user
-
+log_action
 # FUNCTION: show menu
 show_menu() {
     echo ""                       #Print a blank line for spacing
@@ -22,6 +22,11 @@ show_menu() {
     echo "2) List files"          #Option 2
     echo "3) Exit"                #Option 3
 }                                                                       
+
+#FUNCTION: Log user actions
+log_action() {
+    echo "$(date): $1" >> "$LOG_FILE"
+}
 
 # FUNCTION: Handle user choice
 handle_choice() {
@@ -36,7 +41,7 @@ handle_choice() {
             ;;
         3)
             echo "Goodbye!" #Exit message
-            log_action "User chose iption 3 (Exit)"
+            log_action "User chose option 3 (Exit)"
             exit 0          #Stops program
             ;;
         *)
@@ -52,7 +57,4 @@ do
     handle_choice $choice           #Call function to handle the choice
 done
 
-#FUNCTION: Log user actions
-log_action() {
-    echo "$(date): $1" >> "$LOG_FILE"
-}
+
