@@ -17,6 +17,7 @@ log_action() {
 greet_user() {
     read -p "Enter your name: " USER_NAME #Asks the user for their name
     echo "Welcome, $USER_NAME"            #Greets the user  
+    log_action "User entered name: $USER_NAME"
 }
 greet_user
 
