@@ -28,16 +28,20 @@ handle_choice() {
     case $1 in
         1)
             date        #Shows current date
+            log_action "User chose option 1 (Show Date)"
             ;;
         2)
             ls          #Lists files
+            log_action "User chose option 2 (List Files)"
             ;;
         3)
             echo "Goodbye!" #Exit message
+            log_action "User chose iption 3 (Exit)"
             exit 0          #Stops program
             ;;
         *)
             echo "Invalid option" #Handle incorrect input
+            log_action "User chose invalit option"
             ;;
     esac   # <-- Close the case statement
 }       # <-- Then close the function
