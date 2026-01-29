@@ -23,3 +23,21 @@ show_menu() {
     echo "3) Exit"                #Option 3
 }                                                                       
 show_menu
+
+# FUNCTION: Handle user choice
+handle_choice() {
+    case $1 in
+        1)
+            date        #Shows current date
+            ;;
+        2)
+            ls          #Lists files
+            ;;
+        3)
+            echo "Goodbye!" #Exit message
+            exit 0          #Stops program
+            ;;
+        *)
+            echo "Invalid option" #Handle incorrect input
+            ;;
+}
