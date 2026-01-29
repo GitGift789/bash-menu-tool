@@ -47,3 +47,8 @@ do
     read -p "Choose an option: " choice  #Ask user to pick an option
     handle_choice $choice           #Call function to handle the choice
 done
+
+#FUNCTION: Log user actions
+log_action() {
+    echo "$(date): $1" >> "$LOG_FILE"
+}
