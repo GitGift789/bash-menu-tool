@@ -8,13 +8,18 @@ LOG_FILE="activity.log"   #Stores the name of the log file
 echo "Bash Toolkit Starting"
 #This prints a welcome message
 
+#FUNCTION: Log user actions
+log_action() {
+    echo "$(date): $1" >> "$LOG_FILE"
+}
+
 # FUNCTION: GREET THE USER
 greet_user() {
     read -p "Enter your name: " USER_NAME #Asks the user for their name
     echo "Welcome, $USER_NAME"            #Greets the user  
 }
 greet_user
-log_action
+
 # FUNCTION: show menu
 show_menu() {
     echo ""                       #Print a blank line for spacing
@@ -22,11 +27,6 @@ show_menu() {
     echo "2) List files"          #Option 2
     echo "3) Exit"                #Option 3
 }                                                                       
-
-#FUNCTION: Log user actions
-log_action() {
-    echo "$(date): $1" >> "$LOG_FILE"
-}
 
 # FUNCTION: Handle user choice
 handle_choice() {
