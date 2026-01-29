@@ -41,3 +41,9 @@ handle_choice() {
             echo "Invalid option" #Handle incorrect input
             ;;
 }
+while true
+do
+    show_menu                       #Show menu every time
+    read -p "Choose an option: " choice  #Ask user to pick an option
+    handle_choice $choice           #Call function to handle the choice
+done
