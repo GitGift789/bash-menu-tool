@@ -40,7 +40,8 @@ handle_choice() {
         *)
             echo "Invalid option" #Handle incorrect input
             ;;
-}
+    esac   # <-- Close the case statement
+}       # <-- Then close the function
 while true
 do
     show_menu                       #Show menu every time
