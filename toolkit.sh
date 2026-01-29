@@ -46,7 +46,7 @@ handle_choice() {
             ;;
         *)
             echo "Invalid option" #Handle incorrect input
-            log_action "User chose invalit option"
+            log_action "User chose invalid option"
             ;;
     esac   # <-- Close the case statement
 }       # <-- Then close the function
